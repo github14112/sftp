@@ -25,7 +25,12 @@ PRUNE=/usr/share/emacs
 DEB=base-files
 DEVICE=/dev/null
 
-DEB=bash
+DEB=dash
+FILE=/bin/sh
+FILE=/usr/bin/scp
+FILE=/usr/bin/ssh
+RECURSE=/lib
+RECURSE=/lib64
 
 FILE=/etc/passwd
 FILE=/etc/group

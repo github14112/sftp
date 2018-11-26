@@ -72,7 +72,7 @@ chmod 755 "/home/$user"
 
 # Use the jail script to build the user a jail
 sed "s/{REPLACE}/\/home\/$user/" /usr/local/bin/scp.jail > ~/scp.jail.tmp
-/usr/local/bin/update-jail ~/scp.jail.tmp
+/usr/local/bin/update-jail ~/scp.jail.tmp 2>&1 | tee -a ~/update-jail.log
 
 # Retrieving user id to use it in chown commands instead of the user name
 # to avoid problems on alpine when the user name contains a '.'
